@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+<link rel="stylesheet" type="text/css" href="css.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="javascript" src="sketch.js" type="text/javascript"></script>
+
+<div class="container">
+  <div class="row">
+    <h1 class="title text-center text-primary">Rock, Paper, Scissors</h1>
+    <div class="col-lg-4" id="col-1">
+      <div class="well well-sm">
+        <img style="width: 100%" src="rock.png">
+      </div>
+      <button class="btn btn-primary btn-block" id="rock">Rock</button>
+      <div class"well well-sm" id="rock-num"></div>
+    </div>
+    <div class="col-lg-4" id="col-2">
+      <div class="well well-sm">
+        <img style="width: 100%" src="paper.png">
+      </div>
+      <button class="btn btn-primary btn-block" id="paper">Paper</button>
+      <div class"well well-sm" id="paper-num"></div>
+    </div>
+    <div class="col-lg-4" id="col-3">
+      <div class="well well-sm">
+        <img style="width: 100%" src="scissors.png">
+      </div>
+      <button class="btn btn-primary btn-block" id="scissors">Scissors</button>
+      <div class"well well-sm" id="scissor-num"></div>
+    </div>
+  </div>
+  <div = class="row">
+    <div class="col-lg-6" style="margin-top: 15px">
+      <div class="well well-sm">
+        <h1 class = "text-center text-primary number">Computer's Choice</h1>
+        <div id="comp-choice">
+          <button class="btn btn-primary btn-block" >Rock/Paper/Scissors</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" style="margin-top: 15px">
+      <div class="well well-sm">
+        <h1 class = "text-center text-primary number">Winner</h1>
+        <div id="winner">
+          <button class="btn btn-primary btn-block">Player vs. Computer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class = "text-center text-primary number">Player vs. Computer</h1>
+      <h1 class = "text-center text-primary number" id="score">0 : 0</h1>
+    </div>
+  </div>
+</div>
