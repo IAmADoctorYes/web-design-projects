@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+$("document").ready(function() {
+  var tweeturl = 'https://twitter.com/intent/tweet?text='
+  var url = "";
+  var quote = "";
+  var quotes = ["I seem to have been only like a boy playing on the seashore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me. - Isaac Newton",
+  "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe. - Albert Einstein",
+  "Life cannot have had a random beginning ... The trouble is that there are about 2000 enzymes, and the chance of obtaining them all in a random trial is only one part in 10^40,000, an outrageously small probability that could not be faced even if the whole universe consisted of organic soup. - Fred Hoyle",
+  "It is strange that only extraordinary men make the discoveries, which later appear so easy and simple. - Georg C. Lichtenberg",
+  "There may be babblers, wholly ignorant of mathematics, who dare to condemn my hypothesis, upon the authority of some part of the Bible twisted to suit their purpose. I value them not, and scorn their unfounded judgment. - Nicolaus Copernicus",
+  "There is no law except the law that there is no law. - John Archibald Wheeler",
+  "We pass through this world but once. Few tragedies can be more extensive than the stunting of life, few injustices deeper than the denial of an opportunity to strive or even to hope, by a limit imposed from without, but falsely identified as lying within. - Stephen Jay Gould",
+  "Falsity in intellectual action is intellectual immorality. - Thomas Chrowder Chamberlin",
+  "The black holes of nature are the most perfect macroscopic objects there are in the universe: the only elements in their construction are our concepts of space and time. - Subrahmanyan Chandrasekhar",
+  "The saddest aspect of life right now is tha gathers knowledge faster than society gathers wisdom. ― Isaac Asimov",
+  "Science without religion is lame, religion without science is blind. ― Albert Einstein",
+  "A man who dares to waste one hour of time has not discovered the value of life. ― Charles Darwin",
+  "The good thing about science is that it's true whether or not you believe in it. ― Neil deGrasse Tyson",
+  "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. ― Marie Curie",
+  "You cannot teach a man anything; you can only help him discover it in himself. - Galileo",
+  "Imagination is more important than knowledge. - Albert Einstein",
+  "Shall I refuse my dinner because I do not fully understand the process of digestion? - Oliver Heaviside",
+  "If I have seen further it is by standing on the shoulders of Giants. ― Isaac Newton",
+  "Equipped with his five senses, man explores the universe around him and calls the adventure Science. - Edwin Powell Hubble",
+  "One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don't throw it away. ― Stephen Hawking"]
+  quote = quotes[Math.floor(Math.random()*quotes.length)];
+  $("#quote").html("<h1>" + quote + "</h1>");
+  $("#button").on("click", function(){
+    quote = quotes[Math.floor(Math.random()*quotes.length)];
+    $("#quote").html('<h1>' + quote + '</h1>');
+  });
+  $("#twitter").on("click", function(){
+    url = tweeturl + quote.replace(' ','%20').replace(';','%3B').replace(':','%3A');
+    window.open(url);
+  });
+});
+</script>
+
+<style>
+#heading {
+  font-family: Lobster;
+  font-size: 100px;
+  margin-top: 25px;
+}
+
+.container {
+    background: #428BCA;
+    color: #fff;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    height: 100%;
+}
+
+.btn {
+  font-family: Lobster;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+#quote {
+  font-family: Lobster;
+  font-size: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-width: thick;
+  border-style: solid;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 20 20 20 20;
+}
+</style>
+
+<div class="container">
+  <h1 id="heading">Random Quote Generator</h1>
+  <div class="quote">
+    <div id="quote">
+    </div>
+  </div>
+  <div class="button">
+    <button class="btn btn-primary" id="button">New Quote</button>
+  </div>
+  <div class="twitter-button" id="twitter">
+    <a class="twitter-share-button btn btn-primary" data-size="large">Share</a>
+  </div>
+</div>
